@@ -3,7 +3,18 @@ using System.Text;
 
 namespace NotePadCore
 {
-    public class Filemanager
+    public interface IFilemanager
+    {
+        string GetContent(string filePath);
+        string GetContent(string filePath, Encoding encoding);
+        void SaveContent(string content, string filePath);
+        void SaveContent(string content, string filePath, Encoding encoding);
+        int GetSymbolCuont(string content);
+        bool IsExist(string filePath);
+
+    }
+
+    public class Filemanager : IFilemanager
     {
         private readonly Encoding _defaultEncoding = Encoding.GetEncoding(1251);
 

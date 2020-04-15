@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NotePadCore;
 
 namespace NotePadOnCSharp
 {
@@ -16,7 +17,14 @@ namespace NotePadOnCSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            MainForm form = new MainForm();
+            MessageService service = new MessageService();
+            Filemanager manager = new Filemanager();
+            MainPresenter presenter = new MainPresenter(form, manager, service);
+
+
+            Application.Run(form);
         }
     }
 }

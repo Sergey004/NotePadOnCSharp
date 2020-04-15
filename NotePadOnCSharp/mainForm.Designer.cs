@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.fldFilePath = new System.Windows.Forms.TextBox();
-            this.BatSelectFile = new System.Windows.Forms.Button();
+            this.butSelectFile = new System.Windows.Forms.Button();
             this.butOpenFile = new System.Windows.Forms.Button();
             this.font = new System.Windows.Forms.Label();
             this.numFont = new System.Windows.Forms.NumericUpDown();
@@ -61,15 +61,15 @@
             this.fldFilePath.Size = new System.Drawing.Size(392, 20);
             this.fldFilePath.TabIndex = 1;
             // 
-            // BatSelectFile
+            // butSelectFile
             // 
-            this.BatSelectFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BatSelectFile.Location = new System.Drawing.Point(503, 18);
-            this.BatSelectFile.Name = "BatSelectFile";
-            this.BatSelectFile.Size = new System.Drawing.Size(75, 23);
-            this.BatSelectFile.TabIndex = 2;
-            this.BatSelectFile.Text = "Выбрать";
-            this.BatSelectFile.UseVisualStyleBackColor = true;
+            this.butSelectFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butSelectFile.Location = new System.Drawing.Point(503, 18);
+            this.butSelectFile.Name = "butSelectFile";
+            this.butSelectFile.Size = new System.Drawing.Size(75, 23);
+            this.butSelectFile.TabIndex = 2;
+            this.butSelectFile.Text = "Выбрать";
+            this.butSelectFile.UseVisualStyleBackColor = true;
             // 
             // butOpenFile
             // 
@@ -167,7 +167,7 @@
             this.Controls.Add(this.numFont);
             this.Controls.Add(this.font);
             this.Controls.Add(this.butOpenFile);
-            this.Controls.Add(this.BatSelectFile);
+            this.Controls.Add(this.butSelectFile);
             this.Controls.Add(this.fldFilePath);
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
@@ -184,7 +184,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox fldFilePath;
-        private System.Windows.Forms.Button BatSelectFile;
+        private System.Windows.Forms.Button butSelectFile;
         private System.Windows.Forms.Button butOpenFile;
         private System.Windows.Forms.Label font;
         private System.Windows.Forms.NumericUpDown numFont;
