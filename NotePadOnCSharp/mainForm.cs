@@ -10,9 +10,7 @@ using System.Windows.Forms;
 
 namespace NotePadOnCSharp
 {
-    public partial class MainForm : Form
-    {
-        public interface IMainForm
+    public interface IMainForm
         {
             string FilePath { get; }
             string Content { get; set; }
@@ -20,54 +18,54 @@ namespace NotePadOnCSharp
             event EventHandler FileOpenClick;
             event EventHandler FileSaveClick;
             event EventHandler ContentChanged;
-        }
-        public partial class MainForm: Form, IMainForm
+     }
+    public partial class MainForm: Form, IMainForm
+     {
+      public MainForm()
+      {
+        InitializeComponent();
+           butOpenFile.Click += ButOpenFile_Click;
+           butSaveFile.Click += ButSaveFile_Click;
+           fldContent.TextChanged += fldContent_TextChanged;
+
+      }
+
+       #region Проброс событий
+       void ButOpenFile_Click(object sender, EventArgs e)
+       {
+       if (FileOpenClick != null) FileOpenClick(this, EventArgs.Empty);
+       }
+
+       void ButSaveFile_Click(object sender, EventArgs e)
+       {
+         if (FileSaveClick != null) FileSaveClick(this, EventArgs.Empty);
+       }
+        void fldContent_TextChanged(object sender, EventArgs e)
         {
-            public MainForm()
-            {
-            InitializeComponent();
-                butOpenFile.Click += ButOpenFile_Click;
-                butSaveFile.Click += ButSaveFile_Click;
-                fidContent.TextChanged += fidContent_TextChanged;
+         if (ContentChanged != null) ContentChanged(this, EventArgs.Empty);
+        }
+        #endregion
 
-            }
-
-            #region Проброс событий
-            void ButOpenFile_Click(object sender, EventArgs e)
-            {
-                if (FileOpenClick != null) FileOpenClick(this, EventArgs.Empty);
-            }
-
-           void ButSaveFile_Click(object sender, EventArgs e)
-           {
-                if (FileSaveClick != null) FileSaveClick(this, EventArgs.Empty);
-           }
-            void fidContent_TextChanged(object sender, EventArgs e)
-            {
-                if (ContentChanged != null) ContentChanged(this, EventArgs.Empty);
-            }
-
-
-            public string FilePath
+        #region Реализация IMainForm
+        public string FilePath
             {
                 get { return fldFilePath.Text;  }
             }
 
-            public string Content
+        public string Content
             {
                 get { return fldContent.Text; }
-                set { fldContent.text = value; }
+                set { fldContent.Text = value; }
             }
 
-            public void SetSymbolCount(int count)
+        public void SetSymbolCount(int count)
             {
                 lblSymbolCount.Text = count.ToString();
             }
-            #endregion
+        #endregion
 
-            public event EventHandler FileOpenClick;
-           public event EventHandler FileSaveClick;
-           public event EventHandler ContentChanged;
-        }
+        public event EventHandler FileOpenClick;
+        public event EventHandler FileSaveClick;
+        public event EventHandler ContentChanged;
     }
 }
