@@ -63,8 +63,9 @@ namespace NotePadOnCSharp
             {
                 lblSymbolCount.Text = count.ToString();
             }
+            #endregion
 
-           public event EventHandler FileOpenClick;
+            public event EventHandler FileOpenClick;
            public event EventHandler FileSaveClick;
            public event EventHandler ContentChanged;
         }
