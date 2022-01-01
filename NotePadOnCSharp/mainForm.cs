@@ -85,5 +85,22 @@ namespace NotePadOnCSharp
         {
             fldContent.Font = new Font("Calibri", (float)numFont.Value);
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                fldContent.ReadOnly = true;
+            }
+            else
+            {
+                fldContent.ReadOnly = false;
+            }
+        }
     }
 }

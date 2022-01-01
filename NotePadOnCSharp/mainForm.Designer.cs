@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.fldFilePath = new System.Windows.Forms.TextBox();
             this.butSelectFile = new System.Windows.Forms.Button();
@@ -39,60 +40,41 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSymbolCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numFont)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Выберете файл";
             // 
             // fldFilePath
             // 
-            this.fldFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fldFilePath.Location = new System.Drawing.Point(105, 18);
+            resources.ApplyResources(this.fldFilePath, "fldFilePath");
             this.fldFilePath.Name = "fldFilePath";
-            this.fldFilePath.Size = new System.Drawing.Size(392, 20);
-            this.fldFilePath.TabIndex = 1;
             // 
             // butSelectFile
             // 
-            this.butSelectFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butSelectFile.Location = new System.Drawing.Point(503, 18);
+            resources.ApplyResources(this.butSelectFile, "butSelectFile");
             this.butSelectFile.Name = "butSelectFile";
-            this.butSelectFile.Size = new System.Drawing.Size(75, 23);
-            this.butSelectFile.TabIndex = 2;
-            this.butSelectFile.Text = "Выбрать";
             this.butSelectFile.UseVisualStyleBackColor = true;
             // 
             // butOpenFile
             // 
-            this.butOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butOpenFile.Location = new System.Drawing.Point(584, 18);
+            resources.ApplyResources(this.butOpenFile, "butOpenFile");
             this.butOpenFile.Name = "butOpenFile";
-            this.butOpenFile.Size = new System.Drawing.Size(75, 23);
-            this.butOpenFile.TabIndex = 3;
-            this.butOpenFile.Text = "Открыть";
             this.butOpenFile.UseVisualStyleBackColor = true;
             // 
             // font
             // 
-            this.font.AutoSize = true;
-            this.font.Location = new System.Drawing.Point(12, 48);
+            resources.ApplyResources(this.font, "font");
             this.font.Name = "font";
-            this.font.Size = new System.Drawing.Size(41, 13);
-            this.font.TabIndex = 4;
-            this.font.Text = "Шрифт";
             // 
             // numFont
             // 
-            this.numFont.Location = new System.Drawing.Point(105, 46);
+            resources.ApplyResources(this.numFont, "numFont");
             this.numFont.Maximum = new decimal(new int[] {
             72,
             0,
@@ -104,8 +86,6 @@
             0,
             0});
             this.numFont.Name = "numFont";
-            this.numFont.Size = new System.Drawing.Size(108, 20);
-            this.numFont.TabIndex = 5;
             this.numFont.Value = new decimal(new int[] {
             11,
             0,
@@ -114,53 +94,45 @@
             // 
             // fldContent
             // 
-            this.fldContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fldContent.Location = new System.Drawing.Point(15, 90);
-            this.fldContent.Multiline = true;
+            resources.ApplyResources(this.fldContent, "fldContent");
             this.fldContent.Name = "fldContent";
-            this.fldContent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.fldContent.Size = new System.Drawing.Size(644, 481);
-            this.fldContent.TabIndex = 6;
             // 
             // butSaveFile
             // 
-            this.butSaveFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.butSaveFile.Location = new System.Drawing.Point(585, 592);
+            resources.ApplyResources(this.butSaveFile, "butSaveFile");
             this.butSaveFile.Name = "butSaveFile";
-            this.butSaveFile.Size = new System.Drawing.Size(75, 23);
-            this.butSaveFile.TabIndex = 7;
-            this.butSaveFile.Text = "Сохранить";
             this.butSaveFile.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblSymbolCount});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 626);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(672, 22);
-            this.statusStrip1.TabIndex = 8;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(137, 17);
-            this.toolStripStatusLabel1.Text = "Колличество символов";
             // 
             // lblSymbolCount
             // 
+            resources.ApplyResources(this.lblSymbolCount, "lblSymbolCount");
             this.lblSymbolCount.Name = "lblSymbolCount";
-            this.lblSymbolCount.Size = new System.Drawing.Size(0, 17);
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 648);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.butSaveFile);
             this.Controls.Add(this.fldContent);
@@ -171,7 +143,7 @@
             this.Controls.Add(this.fldFilePath);
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
-            this.Text = "Текстовоый редактор";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numFont)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -193,6 +165,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel lblSymbolCount;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
